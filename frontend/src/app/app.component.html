@@ -1,0 +1,110 @@
+<!-- <ul>
+  <li *ngFor="let api of apisObservable " >
+    -- name: {{api.API}}
+    -- Description: {{api.Description}}
+    -- Auth: {{api.Auth}}
+    -- HTTPS: {{api.HTTPS}}
+    -- Cors: {{api.Cors}}
+    -- Link: {{api.Link}}
+    -- Category: {{api.Category}}
+  </li>
+</ul> -->
+
+<header>
+  <h1 class="text-5xl h-20 lg:h-32 flex justify-center items-center">Hi! Let's Code with free Api's</h1>
+</header>
+
+<input min="1" max="5" class="in-range:border-green-500 ..." />
+<div class="flex justify-center">
+  <details class="dropdown" >
+    <summary class="m-1 btn">Categories</summary>
+    <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52" >
+      <li><a (click)="selectCategory('All')">All</a></li>
+      <li><a (click)="selectCategory('Music')">Music</a></li>
+      <li><a (click)="selectCategory('Developments')">Developments</a></li>
+      <li><a (click)="selectCategory('Books')">Books</a></li>
+      <li><a (click)="selectCategory('Cryptocurrency')">Cryptocurrency</a></li>
+      <li><a (click)="selectCategory('Dictionaries')">Dictionaries</a></li>
+      <li><a (click)="selectCategory('Finances')">Finances</a></li>
+      <li><a (click)="selectCategory('Games_Comics')">Games and Comics</a></li>
+      <li><a (click)="selectCategory('Geocoding')">Geocoding</a></li>
+      <li><a (click)="selectCategory('Animals')">Animals</a></li>
+      <li><a (click)="selectCategory('Government')">Government</a></li>
+      <li><a (click)="selectCategory('Personality')">Personality</a></li>
+      <li><a (click)="selectCategory('Test_Data')">Test Data</a></li>
+      <li><a (click)="selectCategory('Security')">Security</a></li>
+      <li><a (click)="selectCategory('Uncategories')">Uncategories</a></li>
+      <li><a (click)="selectCategory('Sports_Fitness')">Sports and Fitness</a></li>
+      <li><a (click)="selectCategory('Weather')">Weather</a></li>
+      <li><a (click)="selectCategory('Transportation')">Transportation</a></li>
+    </ul>
+  </details>
+</div>
+
+
+
+
+<br/>
+
+<div  class="grid grid-cols-4 md:grid-cols-4 sd:grid-cols-3 gap-4 pl-4" >
+  <div *ngFor="let api of view_data ">
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <figure >
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="music"  />
+        <img *ngIf="api.Category == 'Animals'" src={{api_images.animals}} alt="animals"  />
+        <img *ngIf="api.Category === 'Developments'" src={{api_images.developments}} alt="Developments"  />
+        <img *ngIf="api.Category === 'Anime'" src={{api_images.anime}} alt="anime" />  />
+        <img *ngIf="api.Category == 'Books'" src={{api_images.books}} alt="Books"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+        <img *ngIf="api.Category == 'Music'" src={{api_images.music}} alt="Shoes"  />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          {{api.API}}{{api.Category}}
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>{{api.Description}}</p>
+        <div class="card-actions justify-start">
+          <div class="badge badge-outline badge-secondary">Https : {{api.HTTPS}}</div>
+          <div class="badge badge-outline badge-secondary">Cors : {{api.Cors}}</div>
+          <div class="badge badge-outline badge-secondary">Category : {{api.Category}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="container md:container md:mx-auto columns-1 md:columns-4 sm:columns-2">
+  <div *ngFor="let api of apisObservable ">
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+      <div class="card-body">
+        <h2 class="card-title">
+          Shoes!
+          <div class="badge badge-secondary">NEW</div>
+        </h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">Fashion</div>
+          <div class="badge badge-outline">Products</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div> -->
+
+
+
+
+
+
+
+
